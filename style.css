@@ -19,6 +19,15 @@ body {
     min-height: 100vh;
 }
 
+img {
+    display: flex;
+    max-width: 90px;
+    height: 5vh;
+    width: auto;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
 .sidebar a {
     display: block;
     color: #000;
@@ -41,14 +50,6 @@ body {
     color: white;
 }
 
-.author-info img {
-    display: flex;
-    height: 5vh;
-    width: auto;
-    border-radius: 50%;
-    margin-right: 15px;
-}
-
 .author-text h2 {
     margin: 5px 0;
     font-size: 16px;
@@ -65,7 +66,7 @@ body {
 div.content {
     display: flex;
     align-items: center;
-    margin-left: 200px;
+    margin-left: 50%;
     padding: 1px 16px;
     min-height: 100vh;
 }
@@ -130,10 +131,47 @@ button {
         display: none;
     }
 
-    .Link {
+    .link {
         justify-content: center;
         display: flex;
         flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 661px) {
+    .sidebar {
+        display: flex;
+        height: 100vh;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .content iframe {
+        display: flex;
+        max-width: 70%;
+        margin: 60% auto;
+    }
+
+    .link {
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+    }
+
+    .link img {
+        width: auto;
+        height: 30%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .link {
+        margin-top: 0;
+        display: flex;
+        flex-direction: row;
+        align-self: center;
         align-items: center;
     }
 }
